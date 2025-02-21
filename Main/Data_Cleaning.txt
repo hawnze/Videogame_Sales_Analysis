@@ -1,0 +1,54 @@
+
+-------------------------------------------------------------
+Importing Data:
+- I created a query using Import Wizard but attempted with CREATE TABLE first.
+
+-------------------------------------------------------------
+Cleaning Data:
+
+- edited "Platform" from int -> text
+- had to edit "JP_Sales", "NA_Sales" from int -> double
+- had to edit "Global_Sales" from text -> double
+
+- Dealing with NULLS:
+	- None came up
+
+-Dealing with duplicates:
+	- Found duplicates of Madden NFL 13 but they had different sales
+	- I ended up deleting the one with only 0.01 in sales
+
+
+#I noticed that there was a big gap in finding the count of the number of rows (16326) and the highest rank (16600)
+#After investigation, I realized that MySQL was only able to import 16300+ rows from the original 16600.
+#After using Excel to observe the raw data, I found that it didn't import any of the original data with 'N/A' 
+#as the year because I set the data type to 'int' 
+# I then came to a conclusion that this is fine since if it doesn't tell us a year, then we can't really use it
+# as information when we actually get to the EDA.
+#I did end up making a new query tab for the raw dataset which includes all of the data which also includes the games with N/A. We can't really do anything with them in terms of year but we can still see their platform and region sale popularity
+
+
+So I finally imported the data with N/A years:
+	- #Total Global sales is 8820.36 without N/A
+	- #Total Global Sales is: 8920.44 with N/A
+	Is N/A significant enough to be included?
+	
+	- I came to the conclusion that this is around a 1.1% increase including N/A so a `1% difference is generally seen as a minor fluctuation. In summary, I realized that for assessing overall market size, including these rows would provide a more accurate total, but the 1% difference is relatively small and might not significantly impact the strategic conclusions.
+
+
+
+#We have to keep in mind that Madden NFL 13 was rank 16130 consider subtracting 1 rank from values 
+#16131 and up - Ended up not touching this as this wouldn't really skew data significantly
+
+
+#Renamed some Platform titles as I don't like how they're labelled (too many acronyms)
+
+
+#Checked for a few more things in SQL before I started doing Data Analysis such as making sure the Years are correct for the respective consoles and the data. 
+
+#Lastly, I checked if global sales were consistent with their regional sales
+
+
+
+-------------------------------------------------------------
+
+
