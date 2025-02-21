@@ -1,6 +1,5 @@
 # Videogame_Sales_Analysis
-
-Video Games SQL --> Power BI Project
+Data Analysis with Video Games Sales (1980 - ~2015) using SQL --> Power BI Project
 
 Raw Data: https://www.kaggle.com/datasets/willianoliveiragibin/video-game-sales-analyze
 
