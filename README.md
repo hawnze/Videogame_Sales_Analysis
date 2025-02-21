@@ -1,6 +1,7 @@
 # Videogame_Sales_Analysis
 Data Analysis with Video Games Sales (1980 - ~2015) using SQL --> Power BI Project
 
+
 Raw Data: https://www.kaggle.com/datasets/willianoliveiragibin/video-game-sales-analyze
 
 "This dataset provides a comprehensive list of video games with sales exceeding 100,000 copies. The data was collected through web scraping from vgchartz.com, ensuring a robust compilation of sales figures for various games across multiple regions and platforms."
